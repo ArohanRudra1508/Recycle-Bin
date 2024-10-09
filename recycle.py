@@ -14,8 +14,8 @@ STARTSPEED = 5
 FINAL_LEVEL = 10
 ITEMS = ["battery","bottle","chips","plasticbag"]
 
-game_over = false
-game_complete = false
+game_over = False
+game_complete = False
 current_level = 1
 items = []
 animations = []
@@ -23,7 +23,7 @@ animations = []
 # Part 2
 def display_message(heading, subheading):
     screen.draw.text(heading, fontsize = 60, color = "black", centre = CENTRE)
-    screen.draw.text(subheading, fontsize = 30, color = "black" centre = 350,350)
+    screen.draw.text(subheading, fontsize = 30, color = "black", centre = (350,350))
 #Part 3 
     
 def draw():
@@ -53,18 +53,25 @@ def create_items(items_to_create):
     return x
 
 # Part 4
+def layout_items(items_to_layout):
+    number_of_gaps = len(items_to_layout) +1
+    gap_size = WIDTH / number_of_gaps
+    for index,i in enumerate(items_to_layout):
+        new_x_pos = (index+1) * gap_size
+        i.x = new_x_pos
 
+def animate_items(items_to_animate):
+    global animations
+    for i in items_to_animate:
+        dur = STARTSPEED - current_level
+        i.anchor = ("center","bottom")
+        animation = animate(i,duration = dur, on_finished = handle_game_over, y = HEIGHT)
+        animations.append(animation)
 
-
-
-
-
-
-
-
-
-
-
+def handle_game_over():
+    global game_over
+    game_over = True
+    # Part 5
 
 
 
