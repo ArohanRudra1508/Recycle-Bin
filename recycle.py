@@ -12,6 +12,7 @@ CENTREy = HEIGHT/2
 CENTRE = CENTREx,CENTREy
 STARTSPEED = 10
 FINAL_LEVEL = 9
+# Why did I not do 10 levels? It is because the 9th one is already extremely hard!
 ITEMS = ["battery","bottle","chips","plasticbag"]
 
 game_over = False
@@ -110,72 +111,6 @@ def stop_animations(animations_to_stop):
     for animation in animations_to_stop:
         if animation.running:
             animation.stop()
-
-
-pgzrun.go()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 pgzrun.go()
