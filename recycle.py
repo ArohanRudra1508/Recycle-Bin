@@ -10,9 +10,8 @@ HEIGHT = 600
 CENTREx = WIDTH/2
 CENTREy = HEIGHT/2
 CENTRE = CENTREx,CENTREy
-STARTSPEED = 10
-FINAL_LEVEL = 9
-# Why did I not do 10 levels? It is because the 9th one is already extremely hard!
+STARTSPEED = 16
+FINAL_LEVEL = 15
 ITEMS = ["battery","bottle","chips","plasticbag"]
 
 game_over = False
